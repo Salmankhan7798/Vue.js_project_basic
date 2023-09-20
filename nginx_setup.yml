@@ -1,0 +1,21 @@
+---
+- name: Install Nginx
+  hosts: 172.31.39.36  # Replace with the target server or host group
+  become: yes  # Use sudo to become root
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
