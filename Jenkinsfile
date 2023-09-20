@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch:https://github.com/Salmankhan7798/Vue.js_project_basic.git
+                git branch: 'main', url: https://github.com/Salmankhan7798/Vue.js_project_basic.git
             }
         }
 
