@@ -24,13 +24,3 @@ pipeline {
             }
         }
     }
-
-    post {
-        success {
-            // Notify on successful deployment
-        }
-        failure {
-            // Notify on deployment failure
-        }
-    }
-}
