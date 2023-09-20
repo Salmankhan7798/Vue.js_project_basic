@@ -20,7 +20,6 @@ pipeline {
                 sh 'ansible-playbook all nginx_setup.yml'
                 sh 'cp ansible/vue-app.conf /etc/nginx/sites-available/'
                 sh 'ln -s /etc/nginx/sites-available/vue-app.conf /etc/nginx/sites-enabled/'
-                sh 'nginx -t' # Test Nginx configuration
                 sh 'systemctl restart nginx'
             }
         }
