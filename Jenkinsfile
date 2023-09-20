@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Salmankhan7798/Vue.js_project_basic.git'
+                checkout scm
             }
         }
 
